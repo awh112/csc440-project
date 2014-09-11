@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace CSC440_Project.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()

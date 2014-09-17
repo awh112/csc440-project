@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using CSC440_Project.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using CSC440_Project.Modules;
 
 namespace CSC440_Project.Attributes
 {
@@ -14,7 +15,7 @@ namespace CSC440_Project.Attributes
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             var currentUserId = httpContext.User.Identity.GetUserId();
-            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new AppDbContext()));
             var currentUser = manager.FindById(currentUserId);
 
             if (currentUser != null)

@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Excel">
       <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
     </Reference>
@@ -112,12 +120,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -179,10 +181,21 @@
     <Compile Include="Migrations\201409160100496_IsAdmin.Designer.cs">
       <DependentUpon>201409160100496_IsAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201409171722591_OccupationalGroupAndDetailedOccupation.cs" />
+    <Compile Include="Migrations\201409171722591_OccupationalGroupAndDetailedOccupation.Designer.cs">
+      <DependentUpon>201409171722591_OccupationalGroupAndDetailedOccupation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409171740083_ChangeOccupationalCode.cs" />
+    <Compile Include="Migrations\201409171740083_ChangeOccupationalCode.Designer.cs">
+      <DependentUpon>201409171740083_ChangeOccupationalCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DetailedOccupation.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\OccupationalGroup.cs" />
+    <Compile Include="Modules\ExcelParser.cs" />
+    <Compile Include="Modules\AppDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -258,6 +271,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201409160100496_IsAdmin.resx">
       <DependentUpon>201409160100496_IsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409171722591_OccupationalGroupAndDetailedOccupation.resx">
+      <DependentUpon>201409171722591_OccupationalGroupAndDetailedOccupation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409171740083_ChangeOccupationalCode.resx">
+      <DependentUpon>201409171740083_ChangeOccupationalCode.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

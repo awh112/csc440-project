@@ -7,14 +7,15 @@ namespace CSC440_Project.Models
 {
     public class OccupationalGroup
     {
-        public int OccupationalCode;
-        public string GroupName;
-        public int CurrentEmploymentNumber;
-        public int FutureEmploymentNumber;
-        public double PercentChange;
-        public int NumberChange;
-        public int Replacements;
-        public int Openings;
-        public int MedianAnnualWage;
+        public virtual int Id { get; set; }
+        public virtual string OccupationalCode { get; set; }
+        public virtual string GroupName { get; set; }
+        public virtual int CurrentEmploymentNumber { get; set; }
+        public virtual int FutureEmploymentNumber { get; set; }
+        public virtual double PercentChange { get; set; }
+        public virtual int NumberChange { get; set; }
+        public virtual int Replacements { get; set; }
+        public virtual int Openings { get; set; }
+        public virtual int MedianAnnualWage { get; set; }
     }
 }

@@ -1,19 +1,20 @@
 namespace CSC440_Project.Migrations
 {
+    using CSC440_Project.Modules;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CSC440_Project.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<AppDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CSC440_Project.Models.ApplicationDbContext";
+            ContextKey = "CSC440_Project.Modules.AppDbContext";
         }
 
-        protected override void Seed(CSC440_Project.Models.ApplicationDbContext context)
+        protected override void Seed(AppDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

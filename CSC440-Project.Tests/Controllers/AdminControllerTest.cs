@@ -27,13 +27,12 @@ namespace CSC440_Project.Tests.Controllers
 
             while(excelReader.Read())
             {
-
+                //process the data
             }
 
             excelReader.Close();
 
-            //change this when the test is actually written fully
-            Assert.IsNotNull(excelReader);
+            Assert.IsNotNull(result);
         }
     }
 }

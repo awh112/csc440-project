@@ -29,7 +29,7 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     @{
                         var currentUserId = User.Identity.GetUserId();
-                        var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+                        var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new CSC440_Project.Modules.AppDbContext()));
                         var currentUser = manager.FindById(currentUserId);
 
                         if (currentUser != null)

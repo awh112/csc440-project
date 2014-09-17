@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CSC440_Project.Modules;
+using System.IO;
 
 namespace CSC440_Project.Controllers
 {
@@ -30,20 +32,16 @@ namespace CSC440_Project.Controllers
             {
                 var file = Request.Files[0];
 
+                //byte[] data = new byte[file.ContentLength];
 
-                byte[] data = new byte[file.ContentLength];
+                //Stream stream = new MemoryStream(data);
 
-                ParseInputFile(data);
+                ExcelParser.ProcessFile(file.InputStream);
             }
 
             ViewBag.Message = "Success!";
 
             return View("Index");
-        }
-
-        private void ParseInputFile(byte[] data)
-        {
-
         }
     }
 }

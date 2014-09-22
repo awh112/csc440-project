@@ -182,9 +182,8 @@
     <Compile Include="Migrations\201409160100496_IsAdmin.Designer.cs">
       <DependentUpon>201409160100496_IsAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201409171722591_OccupationalGroupAndDetailedOccupation.cs" />
-    <Compile Include="Migrations\201409171722591_OccupationalGroupAndDetailedOccupation.Designer.cs">
-      <DependentUpon>201409171722591_OccupationalGroupAndDetailedOccupation.cs</DependentUpon>
+    <Compile Include="Migrations\201409171722591_OccupationalGroupAndDetailedOccupation.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Migrations\201409171740083_ChangeOccupationalCode.cs" />
     <Compile Include="Migrations\201409171740083_ChangeOccupationalCode.Designer.cs">

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CSC440_Project.Models;
+using CSC440_Project.Modules;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,11 @@ namespace CSC440_Project.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var context = new AppDbContext();
+
+            var groups = context.OccupationalGroups.ToList();
+
+            return View(groups);
         }
 
         public ActionResult About()

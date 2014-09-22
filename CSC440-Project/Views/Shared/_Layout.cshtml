@@ -26,7 +26,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                     @{
                         var currentUserId = User.Identity.GetUserId();
                         var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new CSC440_Project.Modules.AppDbContext()));

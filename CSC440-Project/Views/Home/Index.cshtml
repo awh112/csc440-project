@@ -1,17 +1,20 @@
-﻿@{
+﻿@model IEnumerable<CSC440_Project.Models.OccupationalGroup>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
     <h1>Welcome to the Cincinnati Job Outlook Portal!</h1>
     <p class="lead">
-        The goal of this application is to show the differences between the job markets of
-        Cincinnati and that of the national average.  Along with a general overview of the
-        state of the Cincinnati region compared to the national average, each category can
-        be selected and viewed for more detailed analysis.  Hopefully this will help users
-        determine whether or not Cincinnati is a good fit for their career choices.
+        The goal of this application is to show the prospects of the job market in Cincinnati
+        and how each of them performs now and how they are estimated to perform in the future.  
+        Each occupational group can be selected and viewed for more detailed analysis.  Hopefully 
+        this will help users determine whether or not Cincinnati is a good fit for their career 
+        choices.
     </p>
     <p>
-        Take a look at the below Occupational Groups to get started.
+        Take a look at the occupational groups below to get started.
     </p>
 </div>
+@Html.Partial("OccupationalGroups", Model)

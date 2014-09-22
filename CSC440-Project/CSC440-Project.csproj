@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OccupationalGroupController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,6 +189,18 @@
     <Compile Include="Migrations\201409171740083_ChangeOccupationalCode.cs" />
     <Compile Include="Migrations\201409171740083_ChangeOccupationalCode.Designer.cs">
       <DependentUpon>201409171740083_ChangeOccupationalCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409181835229_UpdateDetailedOccupation.cs" />
+    <Compile Include="Migrations\201409181835229_UpdateDetailedOccupation.Designer.cs">
+      <DependentUpon>201409181835229_UpdateDetailedOccupation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409181842445_CorrectOpeningsAndReplacementsGrowth.cs" />
+    <Compile Include="Migrations\201409181842445_CorrectOpeningsAndReplacementsGrowth.Designer.cs">
+      <DependentUpon>201409181842445_CorrectOpeningsAndReplacementsGrowth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409181845334_UpdatePercentageChangeType.cs" />
+    <Compile Include="Migrations\201409181845334_UpdatePercentageChangeType.Designer.cs">
+      <DependentUpon>201409181845334_UpdatePercentageChangeType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -254,6 +267,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Upload.cshtml" />
+    <Content Include="Views\Shared\OccupationalGroups.cshtml" />
+    <Content Include="Views\OccupationalGroup\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -277,6 +292,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201409171740083_ChangeOccupationalCode.resx">
       <DependentUpon>201409171740083_ChangeOccupationalCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409181835229_UpdateDetailedOccupation.resx">
+      <DependentUpon>201409181835229_UpdateDetailedOccupation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409181842445_CorrectOpeningsAndReplacementsGrowth.resx">
+      <DependentUpon>201409181842445_CorrectOpeningsAndReplacementsGrowth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409181845334_UpdatePercentageChangeType.resx">
+      <DependentUpon>201409181845334_UpdatePercentageChangeType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
